@@ -42,15 +42,7 @@ function TripClass({ onChange }: TripClassProps) {
       </Button>
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
         {items.map(([title, value]) => (
-          <MenuItem
-            disableRipple
-            disableTouchRipple
-            sx={{
-              ':hover': { backgroundColor: 'white' },
-            }}
-            key={title}
-            onClick={() => handleSelect(value, title)}
-          >
+          <MenuItem key={title} onClick={() => handleSelect(value, title)}>
             {title}
           </MenuItem>
         ))}

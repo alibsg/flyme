@@ -35,26 +35,8 @@ function TripType({ onChange }: TripTypeProps) {
         {isRoundTrip ? 'Round Trip' : 'One Way'}
       </Button>
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-        <MenuItem
-          disableRipple
-          disableTouchRipple
-          sx={{
-            ':hover': { backgroundColor: 'white' },
-          }}
-          onClick={() => handleSelect(false)}
-        >
-          One Way
-        </MenuItem>
-        <MenuItem
-          disableRipple
-          disableTouchRipple
-          sx={{
-            ':hover': { backgroundColor: 'white' },
-          }}
-          onClick={() => handleSelect(true)}
-        >
-          Round Trip
-        </MenuItem>
+        <MenuItem onClick={() => handleSelect(false)}>One Way</MenuItem>
+        <MenuItem onClick={() => handleSelect(true)}>Round Trip</MenuItem>
       </Menu>
     </>
   );
