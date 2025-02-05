@@ -91,12 +91,12 @@ function LocationSearch({ label, onLocationChange }: LocationSearchProps) {
       renderInput={(params) => (
         <TextField {...params} label={label} fullWidth />
       )}
-      onChange={(event, newValue) => {
+      onChange={(_event, newValue) => {
         setOptions(newValue ? [newValue, ...options] : options);
         setValue(newValue);
         onLocationChange(newValue);
       }}
-      onInputChange={(event, newInputValue) => {
+      onInputChange={(_event, newInputValue) => {
         setInputValue(newInputValue);
       }}
       renderOption={(props, option) => {

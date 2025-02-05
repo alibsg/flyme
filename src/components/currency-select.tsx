@@ -84,7 +84,7 @@ function CurrencySelect({ label, onChange }: CurrencySelectProps) {
       renderInput={(params) => (
         <TextField {...params} label={label} fullWidth />
       )}
-      onChange={(event, newValue) => {
+      onChange={(_event, newValue) => {
         setValue(newValue);
         onChange(newValue);
       }}
